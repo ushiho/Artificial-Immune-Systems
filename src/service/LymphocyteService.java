@@ -8,11 +8,9 @@ package service;
 import java.util.ArrayList;
 import java.util.BitSet;
 import bean.Lymphocyte;
-import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-import service.ImmuneSystemService;
 
 
 /**
@@ -24,8 +22,8 @@ public class LymphocyteService {
     // Lymphocyte set should contain only Lymphocyte objects that do not detect any patterns in the self-set.
     public static ArrayList<Lymphocyte> createLymphocyteSet(ArrayList<BitSet> selfSet,int numAntibodyBits, int numLymphocytes){
         
-        ArrayList<Lymphocyte> result = new ArrayList<Lymphocyte>();
-        Map<Integer, Boolean> contents = new HashMap<Integer, Boolean>();
+        ArrayList<Lymphocyte> result = new ArrayList<>();
+        Map<Integer, Boolean> contents = new HashMap<>();
         
         while (result.size() < numLymphocytes){
             
@@ -53,7 +51,7 @@ public class LymphocyteService {
           for (int i = 0; i < numBits; ++i)
           {
             int b = new Random().nextInt(2);  // between [0,1] inclusive
-            bools[i] = (b == 0) ? false : true;
+            bools[i] = (b != 0);
           }
           
           return ImmuneSystemService.createBitSet(bools, numBits);

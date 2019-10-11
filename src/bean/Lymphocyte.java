@@ -80,10 +80,7 @@ public class Lymphocyte {
         if (!Objects.equals(this.antibody, other.antibody)) {
             return false;
         }
-        if (!Arrays.equals(this.searchTable, other.searchTable)) {
-            return false;
-        }
-        return true;
+        return Arrays.equals(this.searchTable, other.searchTable);
     }
     
     public String toString(int numAntibodyBits) {

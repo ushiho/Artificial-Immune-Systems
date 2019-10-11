@@ -6,12 +6,9 @@
 package service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.BitSet;
 import java.util.List;
 import java.util.Random;
-import bean.Lymphocyte;
-import service.LymphocyteService;
 
 /**
  *

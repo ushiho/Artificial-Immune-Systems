@@ -40,7 +40,7 @@ public class Test {
         LymphocyteService.showLymphocyteSet(lymphocyteSet, numAntibodyBits);
         System.out.println("\nBegin AIS intrusion detection simulation\n");
         int time = 0;
-        int maxTime = 6;
+        int maxTime = 8;
         while (time < maxTime){
             
             System.out.println("============================================");
